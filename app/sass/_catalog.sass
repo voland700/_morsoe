@@ -1,0 +1,98 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.catalog
+	width: 100%
+	background-color: #fff
+	padding: 30px 15px 40px 15px
+.catalog-wrap
+	max-width: 1005px
+	margin: 0 auto
+.catalog-list
+	width: 100%
+.catalog-list-title
+	width: 100%
+	padding: 0 0 0.5rem 0
+	margin: 0 0 0.5rem 0
+	border-bottom: 1px solid #dedede
+.catalog-list-name
+	display: inline-block
+	margin: 0
+	a 
+		display: block
+		color: #000
+		text-transform: uppercase
+		font-size: 1rem
+		text-align: left
+		vertical-align: middle
+		transition: color .25s ease
+		&:hover
+			text-decoration: none
+			color: $title
+	
+.catalog-list-diler
+	display: inline-block
+	font-size: 0.8rem	
+	text-transform: uppercase
+	padding: 0 0.25rem 0.1rem 0.75rem
+	//vertical-align: middle
+	vertical-align: inherit
+	margin-left: 0.75rem
+	color: $accent
+	border-left: 1px solid #000
+	font-weight: normal
+	transition: color .25s ease
+	&:hover
+		text-decoration: none
+		color: #000
+
+.catalog-list-items
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+.catalog-item-wrap
+	width: 117px
+	height: auto
+	margin-right: 5px
+	transition: color .25s ease
+	corsor: pointer
+	&:hover
+		.catalog-item-img 
+		.catalog-item-title a
+			color: $accent
+			text-decoration: none
+
+
+.catalog-item-img
+	display: table-cell
+	vertical-align: middle
+	text-align: center
+	width: 100px
+	height: 100px
+	margin: 0 auto 5px auto
+	img 
+		width: auto
+		max-width: 100px
+		height: auto
+		max-height: 100px 
+
+.catalog-item-title
+	color: #000
+	padding-bottom: 0.5rem
+	margin: 0 auto 1rem auto
+	text-transform: none
+	font-weight: normal
+	text-align: center
+	display: block
+	max-width: 117px
+	overflow: hidden
+	font-size: 0.8rem
+	line-height: normal
+	a 
+		color: #000
+		transition: color .25s ease
+
+	

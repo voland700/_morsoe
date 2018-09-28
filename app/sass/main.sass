@@ -1,0 +1,235 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "font-awesome-min"
+@import "jquery-fancybox-min"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: $body!important
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	header .naw-catalog
+		height: 100px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+
+.head
+	display: flex
+	align-items: flex-start
+	width: 100%
+	height: 570px
+	overflow: hidden
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover	
+	text-align: center
+	border-bottom: 2px solid darken($body, 10%)
+.head-catalog
+	display: flex
+	align-items: flex-start
+	width: 100%
+	height: 100px
+	overflow: hidden
+	background-position: top
+	background-repeat: no-repeat
+	background-size: cover
+	text-align: center
+
+
+
+
+.naw-wrap
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	width: 100%
+	height: 100px
+	color: #fff
+	
+	background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+.naw-logo
+	display: block
+	width: 130px
+	height: auto
+	margin: auto 30px
+
+.naw-logo 
+	transition: .3s
+	&:hover svg .logo-title path
+		fill: lighten($accent, 25%)
+  
+
+.nav-list
+	display: flex
+	flex-direction: row
+	height: 100%
+	width: auto
+	padding: 0
+	margin: 0
+	z-index: 10
+.naw-btn
+	display: none
+.nav-item
+	display: flex
+	list-style: none
+	font-size: 1.25rem	
+	a 
+		display: block		
+		color: #fff
+		text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+		padding: 28px 15px 7px 15px
+		margin: auto 0
+		transition: .3s
+		&:hover 
+			text-decoration: none
+			color: lighten($accent, 25%)
+.nav-search
+	display: block
+	font-size: 1.25rem
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+	padding: 28px 15px 7px 15px
+	margin: auto 50px auto 0
+	cursor: pointer
+	transition: .3s
+	&:hover 
+		color: lighten($accent, 25%)
+	i
+		margin-right: 7px	
+.nav-search-txt
+
+.search_wrap
+	display: none
+	position: absolute
+	top: 90px 
+	right: 80px
+	box-sizing: border-box
+	border-radius: 2px
+	background: #fff
+	width: 450px
+	height: auto
+	box-shadow: 0 0 6px rgba(122,122,122,.8)
+.form-wrap
+	display: flex
+	justify-content: space-between
+	padding: 8px
+.search-form
+	flex-basis: 100%
+	padding: 10px
+	border: none
+	overflow: hidden
+	color: $accent
+	&::-webkit-input-placeholder
+		color: $accent
+		font-style: italic
+	&::-moz-placeholder
+		color: $accent
+		font-style: italic
+	
+.search-btn
+	transition: background .25s ease
+	text-transform: uppercase
+	display: inline-block
+	letter-spacing: 1px
+	white-space: normal
+	vertical-align: top
+	background: $accent
+	padding: 11px 10px
+	text-align: center
+	position: relative
+	line-height: 20px
+	width: 130px
+	color: #fff
+	outline: none
+	border: none
+	font-weight: 700
+	font-size: 14px
+	cursor: pointer
+	transition: .3s
+	&:hover 
+		background-color: $darck
+
+@media only screen and (max-width : 920px)
+	.naw-wrap
+		flex-wrap: wrap
+
+	.nav-search
+		display: none
+	.search_wrap
+		display: block
+		position: relative
+		top: 0
+		left: 0
+		width: 100%
+		border-bottom: 2px solid darken($body, 10%)
+	.nav-list
+		display: none
+		position: absolute
+		top: 75px
+		right: 0
+		//width: 100%	
+		margin: 0 20px 0 auto
+		border-radius: 5px
+	.nav-item 
+		background-color: rgba($darck, .7)
+		
+		a
+			padding: 10px 15px
+		
+
+	.naw-btn
+		display: block
+		width: 40px
+		height: 40px
+		margin: auto 20px auto 0		
+		z-index: 10
+		cursor: pointer
+	.naw-btn-close
+		background: url('../img/icon/burgers.svg') no-repeat transparent center
+	.naw-btn-open
+		background: url('../img/icon/closed.svg') no-repeat transparent center
+
+
+@import "_breadcrumb"
+@import "_mainproducts"
+@import "_showcase"
+@import "_paralax"
+@import "_maininfo"
+@import "_footer"
+@import "_catalog"
+@import "_list"	
+@import "_pagination"	
+@import "_goods"		
+	
+@import "media" // Always at the end

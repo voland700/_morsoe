@@ -77,12 +77,51 @@
 		height: 2px
 		bottom: 0
 		left: 50%
-
-	
 .goods_img-prew
 	width: 100%
 	display: none
-
 .goods_discrip-params
-	width: 60%
+	width: 440px
+	margin-left: 30px
+.goods_params-title
+	display: inline-block
+	text-transform: uppercase
+	line-height: 21px
+	font-weight: 600
+	font-size: 15px
+	position: relative
+	&:after
+		background: $accent
+		margin: 0 0 0 -50px
+		position: absolute
+		width: 100px
+		content: ""
+		height: 2px
+		bottom: 0
+		left: 50%
+.goods_params-list
+	padding: 0
 
+.goods_params-item
+	display: flex
+	justify-content: space-between
+	width: 100%
+	list-style: none
+	&:nth-child(odd)
+		background-color: darken($body, 1%)
+.goods_params-name
+	display: inline-block
+	text-align: left
+	padding: 4px 9px 4px 9px
+.goods_params-value
+	display: inline-block
+	text-align: right
+	font-weight: 600
+	padding: 4px 9px 4px 9px
+
+.goods_discrip-call
+	display: block
+	width: 250px
+	height: 400px
+	margin-left: auto
+	background-color: darken($body, 15%)

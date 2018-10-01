@@ -81,20 +81,21 @@
 	width: 100%
 	display: none
 .goods_discrip-params
-	width: 440px
-	margin-left: 30px
+	width: 470px
+	margin-left: 40px
 .goods_params-title
 	display: inline-block
-	text-transform: uppercase
+	//text-transform: uppercase
 	line-height: 21px
 	font-weight: 600
-	font-size: 15px
+	font-size: 20px
 	position: relative
+	padding-bottom: 3px
 	&:after
 		background: $accent
-		margin: 0 0 0 -50px
+		margin: 0 0 0 -50%
 		position: absolute
-		width: 100px
+		width: 100%
 		content: ""
 		height: 2px
 		bottom: 0
@@ -108,7 +109,7 @@
 	width: 100%
 	list-style: none
 	&:nth-child(odd)
-		background-color: darken($body, 1%)
+		background-color: darken($body, 1.5%)
 .goods_params-name
 	display: inline-block
 	text-align: left
@@ -121,7 +122,68 @@
 
 .goods_discrip-call
 	display: block
-	width: 250px
-	height: 400px
+	width: 150px
+	height: auto
 	margin-left: auto
-	background-color: darken($body, 15%)
+.goods_info-item
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	background-color: lighten($body, 2.9%)
+	box-shadow: 0 0 1px rgba(122,122,122,.1)
+	border-radius: 3px
+	padding: 10px
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.goods_info-img
+			svg g path
+				fill: $darck
+
+
+
+
+
+.goods_info-img
+	width: 60px
+	height: 60px
+	margin: 5px auto 10px auto
+	svg
+		width: 100%
+		height: 100%
+		fill: $darck
+		
+
+.goods_info-img-logo
+	width: 120px
+	height: 70px
+	margin: 5px auto 10px auto
+	svg 
+		width: 100%
+		height: 100%
+.logo-title
+	fill: #000
+.goods_info-img-logo:hover .logo-title
+	fill: $accent
+
+
+.goods_info_title
+	display: block
+	width: 100%
+	text-transform: uppercase
+	text-align: center
+	line-height: 24px
+	font-size: 1em
+	overflow: hidden
+	//padding-bottom: 5px
+	//border-bottom: 1px solid #e6e6e6
+	a
+		width: 100%
+		display: block 
+		color: $darck
+		transition: color .25s ease
+		&:hover
+			color: $title
+			text-decoration: none

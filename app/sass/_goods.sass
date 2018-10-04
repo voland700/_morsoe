@@ -9,6 +9,7 @@
 
 .goods_discrip-img
 	width: 35%
+	margin-bottom: 35px
 .goods_img-wrap
 	width: 100%
 	position: relative
@@ -143,9 +144,6 @@
 				fill: $darck
 
 
-
-
-
 .goods_info-img
 	width: 60px
 	height: 60px
@@ -189,5 +187,125 @@
 			text-decoration: none
 
 .goods_desc
+
+.goods_doc-title
+	margin: 10px auto 30px auto
+	font-size: 1.5rem
+	position: relative
+	padding-bottom: 3px
+	&:after
+		background: $accent
+		margin: 0 0 0 -25%
+		position: absolute
+		width: 50%
+		content: ""
+		height: 2px
+		bottom: 0
+		left: 50%
+
+
+.goods_doc-wrap
 	width: 100%
-	margin-top: 30px
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin-bottom: 50px
+.goods_doc-list
+	width: 50%
+	padding-right: 20px
+	ul 
+		padding-left: 0
+		font-size: 1em
+	li
+		list-style: none
+		a
+			color: $darck
+			position: relative
+			padding-left: 10px
+			transition: color .25s ease
+			i 
+				//font-weight: 600
+				margin-right: 10px
+				color: $accent
+
+		a:hover
+			color: $accent
+
+				
+				
+
+.goods_doc-size
+	width: 50%
+	height: 100%
+	display: flex
+	justify-content: center
+	a 
+		display: block
+		padding: 2px
+		background-color: darken($body, 2%)
+
+	img	
+		max-height: 350px
+
+.goods_access
+	width: 100%
+	padding-top: 25px
+	padding-bottom: 25px
+	background-color: darken($body, 3%)
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.goods_discrip-img
+		width: 40%
+	.goods_discrip-params
+		width: 480px
+		margin-left: auto
+	.goods_discrip-call
+		display: none
+	.goods_doc-size a img
+		width: 100%
+		height: auto
+// ≥992px
++media-breakpoint-down(md)
+	.goods_discrip-img
+		width: 40%
+	.goods_discrip-params
+		width: 55%
+		margin-left: auto
+	.goods_doc-list
+		width: 60%
+	.goods_doc-size
+		width: 40%
+// ≥768px
++media-breakpoint-down(sm)
+	.goods_discrip-img
+		width: 70%
+		margin-left: auto
+		margin-right: auto
+	.goods_discrip-params
+		width: 100%
+		margin-left: auto
+	.goods_doc-list
+		width: 70%
+	.goods_doc-size
+		width: 30%
+@media only screen and (max-width : 600px)
+	.goods_discrip-img
+		width: 80%
+	.goods_doc-list
+		width: 100%
+		order: 2
+	.goods_doc-size
+		width: 100%
+		order: 1
+		height: auto
+		margin-bottom: 25px
+@media only screen and (max-width : 500px)
+	.goods_discrip-img
+		width: 90%
+@media only screen and (max-width : 450px)
+	.goods_discrip-img
+		width: 100%
+// ≥576px
++media-breakpoint-down(xs)

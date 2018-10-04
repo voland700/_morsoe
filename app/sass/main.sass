@@ -84,14 +84,15 @@ b, strong
 	margin: auto 30px
 	a 
 		display: block
-.logo-title
-	fill: #fff
+#logo .logo-title
+	fill: #ffffff
 
-.naw-logo 
+.goods_info-img-logo #logoMorso .logo-title
+		fill: #000000
 	
 	
 
-a:hover svg .logo-title
+#logo :hover .logo-title
 		fill: lighten($accent, 25%)
   
 
@@ -105,6 +106,11 @@ a:hover svg .logo-title
 	z-index: 10
 .naw-btn
 	display: none
+	width: 40px
+	height: 25px
+	margin: auto 20px auto 0		
+	z-index: 10
+	cursor: pointer
 .nav-item
 	display: flex
 	list-style: none
@@ -187,7 +193,8 @@ a:hover svg .logo-title
 @media only screen and (max-width : 920px)
 	.naw-wrap
 		flex-wrap: wrap
-
+	.naw-btn
+		display: block
 	.nav-search
 		display: none
 	.search_wrap
@@ -212,19 +219,9 @@ a:hover svg .logo-title
 			padding: 10px 15px
 		
 
-	.naw-btn
-		display: block
-		width: 40px
-		height: 40px
-		margin: auto 20px auto 0		
-		z-index: 10
-		cursor: pointer
-	.naw-btn-close
-		background: url('../img/icon/burgers.svg') no-repeat transparent center
-	.naw-btn-open
-		background: url('../img/icon/closed.svg') no-repeat transparent center
 
 
+@import "_nawbtn"
 @import "_breadcrumb"
 @import "_mainproducts"
 @import "_showcase"
@@ -234,6 +231,7 @@ a:hover svg .logo-title
 @import "_catalog"
 @import "_list"	
 @import "_pagination"	
-@import "_goods"		
-	
+@import "_goods"
+@import "_partner"
+
 @import "media" // Always at the end

@@ -35,7 +35,7 @@ $bar3-position: $bar-width*4
 	width: $icon-width
 	position: relative
 	overflow: hidden
-	
+
 	&:before,
 	&:after 
 		@include transition-mix
@@ -128,8 +128,88 @@ $bar3-position: $bar-width*4
 			
 			&-3 
 				top: $bar2-position
-			
+
+//icon-4 styles
+.menu-icon-reg
+	height: $icon-height
+	cursor: pointer
+	width: $icon-width
+	position: relative
+	overflow: hidden
+
+	&:before,
+	&:after 
+		@include transition-mix
+		content: ''
+		display: block
+		width: 4px
+		height: 28px
+		border-radius: 10px
+		transform-origin: center center
+		background-color: $darck
+	
+	
+	&:before 
+		@include position-absolute($top: 0, $left: 18px)
+		transform: rotate(-45deg)
+	
+	
+	&:after 
+		@include position-absolute($top: 0, $right: 18px)
+		transform: rotate(45deg)
+	
+	
+	.bar 
+		@include transition-mix($delay: 0.2s)
+		width: 100%
+		height: $bar-width
+		background-color: $darck
+		border-radius: 20px
+		
+		&-1 
+			@include position-absolute($top: 0, $left: 0)
+		
+		
+		&-2 
+			@include position-absolute($top: $bar2-position, $left: 0)
+		
+		
+		&-3 
+			@include position-absolute($top: $bar3-position, $left: 0)
 		
 	
+	
+	&.opened 
+		
+		.bar 
+			@include transition-mix
+		
+		
+		&:before,
+		&:after 
+			@include transition-mix($delay: 0.2s)
 
 
+.menu-icon-4 
+	
+	&:before 
+		transform: scale(0,1) rotate(-45deg)
+	
+
+	&:after 
+		transform: scale(0,1) rotate(45deg)
+	 
+	
+	&.opened 
+		
+		&:before 
+			transform: scale(1,1) rotate(-45deg)
+	
+
+		&:after 
+			transform: scale(1,1) rotate(45deg)
+	 
+		
+		.bar 
+			transform: scale(0.4)
+			opacity: 0

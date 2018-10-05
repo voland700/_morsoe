@@ -13,6 +13,15 @@ $('.menu-icon').click(function() {
 	$(this).toggleClass('opened');
 	$('.nav-list').slideToggle('slow'); 
 });
+
+$('.menu-icon-reg').click(function() {
+	$(this).toggleClass('opened');
+	$('.partner-left-menu').animate({width:'toggle'}, 350);
+});
+
+
+
+
 	/* - Блоки одной высоты -*/
 	function someHight(itemClass){
 		let item = document.querySelectorAll(itemClass);

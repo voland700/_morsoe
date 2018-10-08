@@ -84,6 +84,7 @@ b, strong
 	margin: auto 30px
 	a 
 		display: block
+		background-color: rgba($darck, .2)
 #logo .logo-title
 	fill: #ffffff
 
@@ -104,6 +105,7 @@ b, strong
 	padding: 0
 	margin: 0
 	z-index: 10
+	
 .naw-btn
 	display: none
 	width: 40px
@@ -137,7 +139,11 @@ b, strong
 		color: lighten($accent, 25%)
 	i
 		margin-right: 7px	
-.nav-search-txt
+.nav-search-phone
+	display: inline-block
+	margin-right: 30px
+	font-size: 1.2em
+	font-weight: 600
 
 .search_wrap
 	display: none
@@ -166,7 +172,8 @@ b, strong
 	&::-moz-placeholder
 		color: $accent
 		font-style: italic
-	
+.nav-mob-phone
+	display: none	
 .search-btn
 	transition: background .25s ease
 	text-transform: uppercase
@@ -189,10 +196,24 @@ b, strong
 	transition: .3s
 	&:hover 
 		background-color: $darck
-
-@media only screen and (max-width : 920px)
+	// ≥1200px
++media-breakpoint-down(lg)
 	.naw-wrap
 		flex-wrap: wrap
+	.nav-search-phone
+		display: none
+	.nav-mob-phone
+		display: block
+		width: 100%
+		font-size: 1.5em 
+		font-weight: 600
+		text-align-last: right
+		padding-right: 30px
+		order: 4
+		i 
+			margin-right: 10px
+
+@media only screen and (max-width : 920px)
 	.naw-btn
 		display: block
 	.nav-search
@@ -213,14 +234,32 @@ b, strong
 		margin: 0 20px 0 auto
 		border-radius: 5px
 	.nav-item 
-		background-color: rgba($darck, .7)
+		background-color: rgba($darck, .8)
 		
 		a
 			padding: 10px 15px
 		
-
-
-
+	.nav-mob-phone
+		display: block
+		font-size: 1.7rem
+		font-weight: 600
+		text-shadow: 1px 1px 1px rgba(43,56,62,.5)		
+		margin: auto 50px auto 0
+		i 
+			margin-right: 10px
+@media only screen and (max-width : 545px)
+	.naw-logo
+		order: 1
+	.naw-btn
+		order: 2
+	.nav-mob-phone
+		width: 100%
+		text-align-last: left
+		padding-left: 30px
+		order: 3
+		i 	
+			display: none
+			
 @import "_nawbtn"
 @import "_breadcrumb"
 @import "_mainproducts"

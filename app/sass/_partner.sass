@@ -27,14 +27,8 @@
 	flex-direction: row
 	justify-content: flex-start
 	flex-wrap: wrap	
-	//background-color: lighten($body, 2%)
 	background-color: darken($body, 3%)
-	
-	//border: 1px solid darken($body, 3%)
 	border-radius: 5px	
-
-
-
 	
 .partner-list-item
 	font-size: .95em
@@ -206,6 +200,57 @@
 		color: #fff
 		background-color: $darck
 
+.partner-one-wrap
+	width: 75%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap	
+	background-color: darken($body, 3%)
+	border-radius: 5px	
+.partner-one-item
+	font-size: .95em
+	color: #000
+	width: 100%
+	margin: 10px
+	box-sizing: border-box
+	border: 1px solid rgba($accent, .1)
+	border-radius: 5px
+	box-sizing: border-box
+	background-color: #fff
+	overflow: hidden
+	box-shadow: 0 0 1px rgba(122,122,122,.1)
+	border-top: 5px solid #ab8e58
+	padding: 25px 15px
+	transition: .25s ease	
+.partner-one-txt
+	padding-bottom: 20px
+	border-bottom: 1px solid #e6e6e6
+	margin-bottom: 20px
+	p 
+		margin-bottom: 7px
+		line-height: 1.3
+		font-weight: 600
+		span
+			font-weight: normal 
+			font-style: italic
+			margin-left: 7px
+	h2 
+		margin-bottom: 20px
+		color: $darck
+	.partner-one-extra-txt
+		font-weight: normal
+.partner-one-extra-title
+	margi: 20px 0
+	color: $darck
+
+.partner-one-btn
+	
+
+
+
+
+
 
 	// ≥1200px
 +media-breakpoint-down(lg)
@@ -223,6 +268,10 @@
 		width: calc(28% - 15px)
 		margin-bottom: 15px
 		margin-left: 15px
+	.partner-one-wrap
+		width: 72%
+		margin-bottom: 15px
+
 // ≥992px
 +media-breakpoint-down(md)
 	.partner-list-map-wrap
@@ -268,7 +317,13 @@
 		margin-left: 0
 		padding: 0
 		order: 3
-
+	.partner-one-wrap
+		width: 100%
+		height: auto
+		margin-bottom: 15px
+		margin-left: 0
+		padding: 0
+		order: 3		
 	.partner-offer-list
 		width: 100%
 		display: flex
@@ -283,13 +338,35 @@
 		margin: 10px
 		&:last-child
 			margin-bottom: 10px
-		
-
-		
-
 
 // ≥768px
 +media-breakpoint-down(sm)
-
+	.partner-wrap
+		margin-top: 45px
+		.partner-left-menu-btn
+			top: -35px
 // ≥576px
 +media-breakpoint-down(xs)
+	.partner-offer-btn
+		width: 100%
+	.partner-list-btn
+		width: 100%
+@media only screen and (max-width : 515px)
+	.partner-offer-btn
+		width: 100%
+		max-width: 190px
+
+@media only screen and (max-width : 450px)
+	.partner-offer-wrap
+		order: 4
+	.partner-offer-list
+
+	.partner-offer-item
+		width: calc(100% - 20px)
+
+	.partner-list-wrap
+		order: 3
+	.partner-list-item
+		width: calc(100% - 20px)
+	.partner-list-btn
+		max-width: 190px

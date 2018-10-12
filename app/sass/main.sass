@@ -82,6 +82,7 @@ b, strong
 	width: 130px
 	height: auto
 	margin: auto 30px
+	order: 1
 	a 
 		display: block
 		background-color: rgba($darck, .2)
@@ -105,7 +106,9 @@ b, strong
 	padding: 0
 	margin: 0
 	z-index: 10
-	
+	order: 2
+.nav-mob-phone
+	order: 3	
 .naw-btn
 	display: none
 	width: 40px
@@ -113,6 +116,7 @@ b, strong
 	margin: auto 20px auto 0		
 	z-index: 10
 	cursor: pointer
+	order: 4
 .nav-item
 	display: flex
 	list-style: none
@@ -135,6 +139,7 @@ b, strong
 	margin: auto 50px auto 0
 	cursor: pointer
 	transition: .3s
+	order: 3
 	&:hover 
 		color: lighten($accent, 25%)
 	i
@@ -235,18 +240,14 @@ b, strong
 		border-radius: 5px
 	.nav-item 
 		background-color: rgba($darck, .8)
-		
 		a
 			padding: 10px 15px
-		
 	.nav-mob-phone
 		display: block
-		font-size: 1.7rem
-		font-weight: 600
-		text-shadow: 1px 1px 1px rgba(43,56,62,.5)		
-		margin: auto 50px auto 0
-		i 
-			margin-right: 10px
+		width: auto
+		order: 2
+		margin: auto 0
+		padding: 0
 @media only screen and (max-width : 545px)
 	.naw-logo
 		order: 1
@@ -272,5 +273,6 @@ b, strong
 @import "_pagination"	
 @import "_goods"
 @import "_partner"
+@import "_article"
 
 @import "media" // Always at the end

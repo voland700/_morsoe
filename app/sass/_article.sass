@@ -1,0 +1,86 @@
+@import "vars"
+
+.article-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap	
+	margin-left: -10px
+	margin-right: -10px
+.article-list-item
+	width: calc(33.33% - 20px)
+	margin: 10px
+	box-sizing: border-box
+	position: relative
+	padding-bottom: 20px
+	cursor: pointer
+	transition: all .25s ease
+	p 
+		font-style: italic
+		line-height: 1.35
+	&:after 
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 50%
+		height: 2px
+		background-color: $title
+	&:hover
+		color: $title
+		a		 
+			color: $title
+		img 
+			filter: opacity(90%)
+		
+		
+.article-list-img
+	display: block
+	position: relative
+	width: 100%
+	margin-bottom: 5px
+	box-shadow: 0 0 1px rgba(122,122,122,.2)
+	box-sizing: border-box
+	border-radius: 3px
+	overflow: hidden
+	&:before
+		content: ''
+		display: block
+		padding-top: 55%	
+	img 
+		width: 100%
+		position: absolute
+		display: flex
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+	
+
+.article-list-title
+	font-size: 1.05rem
+	a 
+		display: block
+		color: $darck
+		&:hover 
+			text-decoration: none
+			color: $title
+
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+	.article-list-item
+		width: calc(50% - 20px)
+// ≥576px
++media-breakpoint-down(xs)
+
+@media only screen and (max-width : 400px)
+	.article-list-item
+		width: 100%

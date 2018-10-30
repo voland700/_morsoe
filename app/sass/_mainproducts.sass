@@ -14,7 +14,12 @@
 	margin: 15px
 	box-sizing: border-box
 	border-top: 3px solid $accent
-
+	transition: .3s ease
+	&:hover
+		.mainproducts_title a
+			color: #353535
+		.mainproducts_item-img img
+			opacity: .9
 
 .mainproducts_item-img
 	width: 100%
@@ -35,7 +40,7 @@
 	transition: color .25s ease
 	border-bottom: 1px solid #e6e6e6
 	margin-bottom: 12px
-	height: 70px	
+	height: 70px
 	a
 		width: 100%
 		display: block
@@ -45,8 +50,10 @@
 		font-size: 18px
 		text-align: center
 		padding-bottom: 7px
+		transition: color 0.25s ease 0s
 		&:hover
 			text-decoration: none
+			color: #353535
 .mainproducts_btn
 	transition: background .25s ease
 	text-transform: uppercase

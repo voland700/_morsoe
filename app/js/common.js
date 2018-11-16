@@ -72,3 +72,48 @@ $('.hidden-link').click(function () {
 	window.open($(this).data('link'));
 	return false;
 });
+
+/* -- AJAX - форма обратной связи  --*/
+$(document).on('click', '.call_form', function (e) {
+	e.preventDefault();
+	$.ajax({
+		url: '/include/form.php',
+		type: 'POST',
+		data: {},
+		success: function (data) {
+			$('body').append(data);
+			$('#modal').css({
+				'display': 'block'
+			});
+			$('#modalWindow').addClass('modalUp');
+		}
+	});
+	$(document).on('click', '#modalTopBtn', function (e) {
+		$('#modalWindow').animate({
+			opacity: 0
+		}, {
+			duration: 300,
+			easing: "linear",
+			complete: function () {
+				$('#modal').hide(200).remove();
+			},
+			queue: true
+		});
+	});
+
+	window.onclick = function (e) {
+		if (e.target == document.getElementsByClassName('modal__wrap')[0]) {
+			$('#modalWindow').animate({
+				opacity: 0
+			}, {
+				duration: 300,
+				easing: "linear",
+				complete: function () {
+					$('#modal').hide(200).remove();
+				},
+				queue: true
+			});
+		}
+	}
+
+});
